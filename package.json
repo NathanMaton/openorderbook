@@ -1,0 +1,36 @@
+{
+  "name": "openorderbook",
+  "version": "1.0.0",
+  "description": "Decentralized order book protocol on Ethereum",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts",
+    "lint": "solhint 'contracts/**/*.sol'"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.6",
+    "dotenv": "^16.4.7",
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@typechain/ethers-v5": "^10.2.1",
+    "@typechain/hardhat": "^6.1.6",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^20.17.16",
+    "chai": "^4.3.7",
+    "hardhat": "^2.22.18",
+    "solhint": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.2.0",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
