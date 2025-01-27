@@ -20,12 +20,18 @@ const config: HardhatUserConfig = {
     },
     "base-sepolia": {
       url: "https://sepolia.base.org",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: [
+        ...(process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : []),
+        ...(process.env.PRIVATE_KEY2 ? [process.env.PRIVATE_KEY2] : [])
+      ],
       chainId: 84532
     },
     "base": {
-      url: "https://mainnet.base.org",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      url: process.env.BASE_URL || "https://mainnet.base.org",
+      accounts: [
+        process.env.PRIVATE_KEY || "",
+        process.env.PRIVATE_KEY2 || ""
+      ],
       chainId: 8453,
       gasPrice: 1000000000  // 1 gwei
     }

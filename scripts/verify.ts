@@ -6,6 +6,7 @@ export async function verify(contractAddress: string, args: any[]) {
         await run("verify:verify", {
             address: contractAddress,
             constructorArguments: args,
+            contract: "contracts/OrderBookV2.sol:OrderBookV2"
         });
     } catch (e: any) {
         if (e.message.toLowerCase().includes("already verified")) {

@@ -5,14 +5,14 @@ import { verify } from "./verify";
 const USDC_ADDRESS = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
 
 async function main() {
-    console.log("Deploying OrderBookWithETH to Base mainnet...");
+    console.log("Deploying OrderBookV2 to Base mainnet...");
     
-    const OrderBookWithETH = await ethers.getContractFactory("OrderBookWithETH");
-    const orderBook = await OrderBookWithETH.deploy();
+    const OrderBookV2 = await ethers.getContractFactory("OrderBookV2");
+    const orderBook = await OrderBookV2.deploy();
 
     await orderBook.deployed();
 
-    console.log(`OrderBookWithETH deployed to ${orderBook.address}`);
+    console.log(`OrderBookV2 deployed to ${orderBook.address}`);
     
     // Wait for a few block confirmations
     console.log("Waiting for block confirmations...");

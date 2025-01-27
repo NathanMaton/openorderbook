@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract OrderBookWithETH is ReentrancyGuard {
+contract OrderBookV2 is ReentrancyGuard {
     using Counters for Counters.Counter;
     Counters.Counter private _orderIds;
 
